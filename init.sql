@@ -1,8 +1,8 @@
-CREATE USER etl_user WITH SUPERUSER PASSWORD 'password'
+CREATE USER etl_user WITH SUPERUSER PASSWORD 'password'; 
 
 create database coingecko_api; 
 
-GRANT ALL PRIVILEGES ON DATABASE coingecko_api to etl_user
+GRANT ALL PRIVILEGES ON DATABASE coingecko_api to etl_user; 
 
 \c coingecko_api; 
 
