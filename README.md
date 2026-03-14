@@ -28,25 +28,8 @@ This project builds a data pipeline that:
 
 ## Architecture
 
-```
-CoinGecko API
-      │
-      │  HTTP requests (Python)
-      ▼
-┌─────────────┐        ┌─────────────────┐
-│   Extract   │──ETL──▶│   PostgreSQL DB  │
-│  Transform  │        │  (coingecko_api) │
-│    Load     │        └────────┬────────┘
-└─────────────┘                 │
-      ▲                         │
-      │                         ▼
-┌─────────────┐        ┌─────────────────┐
-│   Airflow   │        │    Power BI      │
-│ Orchestrate │        │   Dashboard      │
-└─────────────┘        └─────────────────┘
+![Architecture](pipeline_dark.png)
 
-All services run via Docker Compose
-```
 
 ---
 
