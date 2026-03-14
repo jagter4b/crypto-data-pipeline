@@ -97,3 +97,9 @@ Both DAGs use the **DockerOperator** to run the `crypto_scraper` image, keeping 
 **`coins_list.py`** runs on the first day of every month (`0 0 1 * *`). It performs a full refresh of the `coins_list` table, truncating it and reloading the complete list of coins available on CoinGecko.
 
 Both DAGs have `catchup=False` to prevent Airflow from backfilling missed runs, and logs from each execution are accessible through the Airflow UI via the Graph view.
+
+---
+
+## Dashboard
+
+![Dashboard](Dashboard.png)
